@@ -1,0 +1,16 @@
+{
+  "name": "laravel",
+  "version": "0.0.0",
+  "homepage": "https://github.com/Tyler-Hilbert/laravel",
+  "authors": [
+    "bhoeting <brennan.hoeting@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
