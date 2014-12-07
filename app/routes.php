@@ -24,3 +24,11 @@ Route::get('profile', function()
 Route::get('login', 'SessionsController@create');
 Route::get('logout', 'SessionsController@destroy');
 Route::resource('sessions', 'SessionsController', ['only' => ['store', 'create', 'destroy']]);
+
+Route::get('/music', function() 
+{
+    return View::make('music-room');
+});
+
+Route::resource('messages', 'MessagesController');
+Route::resource('rooms', 'RoomsController');

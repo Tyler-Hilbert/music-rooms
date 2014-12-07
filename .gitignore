@@ -1,9 +1,11 @@
 /bower_components
 /node_modules
+/music-server/node_modules
 /bootstrap/compiled.php
 /vendor
 /public/css/*
 /public/js/*
+/app/database/db.sqlite
 composer.phar
 composer.lock
 .env.*.php
