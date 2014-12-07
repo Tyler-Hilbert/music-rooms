@@ -11,12 +11,16 @@
 |
 */
 
-Route::get('/', function()
+Route::get('/', ['as' => 'home', function()
 {
 	return View::make('home');
-});
+}]);
 
-Route::get('users', function() 
+Route::get('profile', function()
 {
-	return View::make('users');
-});
+	return "Welcome " . Auth::user()->email;
+})->before('auth');
+
+Route::get('login', 'SessionsController@create');
+Route::get('logout', 'SessionsController@destroy');
+Route::resource('sessions', 'SessionsController', ['only' => ['store', 'create', 'destroy']]);
