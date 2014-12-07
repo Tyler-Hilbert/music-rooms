@@ -1,5 +1,11 @@
 <?php
 
+/**
+ * Event listeners
+ */
+
+Event::listen(\Handlers\MessageCreatedEventHandler::EVENT, '\Handlers\MessageCreatedEventHandler');
+
 /*
 |--------------------------------------------------------------------------
 | Register The Laravel Class Loader

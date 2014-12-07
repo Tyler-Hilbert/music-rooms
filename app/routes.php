@@ -20,3 +20,11 @@ Route::get('users', function()
 {
 	return View::make('users');
 });
+
+Route::get('/music', function() 
+{
+    return View::make('music-room');
+});
+
+Route::resource('messages', 'MessagesController');
+Route::resource('rooms', 'RoomsController');
