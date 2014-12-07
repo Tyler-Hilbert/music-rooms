@@ -25,6 +25,9 @@ Route::get('login', 'SessionsController@create');
 Route::get('logout', 'SessionsController@destroy');
 Route::resource('sessions', 'SessionsController', ['only' => ['store', 'create', 'destroy']]);
 
+Route::get('signup', 'SignUpController@create');
+Route::resource('SignUp', 'SignUpController', ['only' => ['store', 'create']]);
+
 Route::get('/music', function() 
 {
     return View::make('music-room');
