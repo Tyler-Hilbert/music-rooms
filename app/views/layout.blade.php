@@ -27,7 +27,7 @@
 					@unless (Auth::check())
 						<li><a href="{{ URL::route('login') }}">Login</a></li>
 					@else
-						<li><a href="{{ URL::route('logout') }}"></a>logout</li>
+						<li><a href="{{ URL::route('logout') }}">logout</a></li>
 					@endif
 				</ul>
 			</div>
