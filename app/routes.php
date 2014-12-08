@@ -21,8 +21,8 @@ Route::get('profile', function()
 	return "Welcome " . Auth::user()->email;
 })->before('auth');
 
-Route::get('login', 'SessionsController@create');
-Route::get('logout', 'SessionsController@destroy');
+Route::get('login', ['as' => 'login', 'uses' => 'SessionsController@create']);
+Route::get('logout', ['as' => 'logout', 'uses' => 'SessionsController@destroy']);
 Route::resource('sessions', 'SessionsController', ['only' => ['store', 'create', 'destroy']]);
 
 Route::get('/music', function() 
