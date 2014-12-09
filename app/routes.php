@@ -16,10 +16,10 @@ Route::get('/', ['as' => 'home', function()
 	return View::make('home');
 }]);
 
-Route::get('profile', function()
+Route::get('profile', ['as' => 'profile', function()
 {
 	return View::make('profile');
-})->before('auth');
+}])->before('auth');
 
 Route::get('login', ['as' => 'login', 'uses' => 'SessionsController@create']);
 Route::get('logout', ['as' => 'logout', 'uses' => 'SessionsController@destroy']);
