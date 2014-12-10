@@ -34,7 +34,8 @@
 		</div>
 	</nav>
     @yield('content') 
-
+	
+	{{ HTML::script('js/app.js') }}
     @yield('javascript')
 </body>
 </html>
