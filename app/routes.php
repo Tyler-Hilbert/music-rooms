@@ -28,10 +28,5 @@ Route::resource('sessions', 'SessionsController', ['only' => ['store', 'create',
 Route::get('signup', 'SignUpController@create');
 Route::resource('SignUp', 'SignUpController', ['only' => ['store', 'create']]);
 
-Route::get('/music', function() 
-{
-    return View::make('music-room');
-});
-
 Route::resource('messages', 'MessagesController');
 Route::resource('rooms', 'RoomsController');
