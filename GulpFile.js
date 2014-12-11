@@ -15,6 +15,7 @@ var lessDir = './resources/less/';
 
 var jsFiles = [
 	'./resources/js/global.js',
+	'./bower_components/jquery/dist/jquery.js'
 ];
 
 gulp.task('less', function() {

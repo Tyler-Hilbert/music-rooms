@@ -16,6 +16,7 @@ class CreateRoomsTable extends Migration {
 		{
 			$table->increments('id');
 			$table->text('name');
+			$table->string('current_song')->default('https://soundcloud.com/acid-notation/king-dedede-theme');
 		});
 	}
 

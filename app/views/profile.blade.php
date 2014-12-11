@@ -2,10 +2,7 @@
 
 @section('content')
 	<div class="container">
-		Name:
-		{{ Auth::user()->username }}
-		<br>
-		Email:
-		{{ Auth::user()->email }}
+		<h1><i class="fa fa-user"></i> {{ Auth::user()->username }}</h1>
+		<h1><i class="fa fa-at"></i> {{ Auth::user()->email }}</h1>
 	</div>
 @stop 

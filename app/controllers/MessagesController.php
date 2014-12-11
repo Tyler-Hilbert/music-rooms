@@ -19,8 +19,6 @@ class MessagesController extends \BaseController {
 
 		$message = Message::create($input);
 
-		Event::fire(Handler::EVENT, $message);
-
 		return $message;
 	}
 

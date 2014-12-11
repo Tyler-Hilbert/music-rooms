@@ -2,15 +2,23 @@
 
 @section('content')
 	<div class="container">
-		<h1>Sign In</h1>
-		{{ Form::open(array('route' => 'sessions.store')) }}
-			{{ Form::label('email', 'Email:') }}
-			{{ Form::text('email') }}
-			<br>
-			{{ Form::label('password', 'Password:') }}
-			{{ Form::password('password') }}
-			<br>
-			{{ Form::submit() }}
-		{{ Form::close() }}
+		<div class="col-md-6 col-md-offset-3 form-container">
+			<h1>Login</h1>
+			<div class="well well-lg">
+				{{ Form::open(array('route' => 'sessions.store')) }}
+					<div class="form-group">
+						{{ Form::label('email', 'Email', ['class' => 'control-label']) }}
+						{{ Form::text('email', null, ['class' => 'form-control input-lg']) }}
+					</div>
+					<div class="form-group">
+						{{ Form::label('password', 'Password', ['class' => 'control-label']) }}
+						{{ Form::password('password', ['class' => 'form-control input-lg']) }}
+					</div>
+					<div class="form-group">
+						{{ Form::submit('Login', ['class' => 'btn btn-primary btn-lg']) }}
+					</div>
+				{{ Form::close() }}
+			</div>
+		</div>
 	</div>
 @stop 

@@ -1,10 +1,6 @@
 <?php
 
-/**
- * Event listeners
- */
 
-Event::listen(\Handlers\MessageCreatedEventHandler::EVENT, '\Handlers\MessageCreatedEventHandler');
 
 /*
 |--------------------------------------------------------------------------
@@ -85,3 +81,8 @@ App::down(function()
 */
 
 require app_path().'/filters.php';
+/**
+ * Event listeners
+ */
+
+Event::listen(\Handlers\MessageCreatedEventHandler::EVENT, '\Handlers\MessageCreatedEventHandler');

@@ -9,6 +9,8 @@ class RoomsController extends \BaseController {
 	 */
 	public function index()
 	{
+		if (!Auth::check()) return Redirect::route('login');
+
 		$rooms = Room::all();
 
 		return View::make('rooms')->withRooms($rooms);
@@ -46,7 +48,7 @@ class RoomsController extends \BaseController {
 
 		Session::set('room_id', $room->id);
 
-		return View::make('room')->withRoom($room);
+		return View::make('music-room')->withRoom($room);
 	}
 
 	/**
@@ -55,9 +57,17 @@ class RoomsController extends \BaseController {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function destroy($id)
+	public function setSong($id)
 	{
-		//
+		$song = Input::get('song');
+
+		$room = Room::find($id);
+
+		$room->current_song = $song;
+
+		$room->save();
+
+		return $room;
 	}
 
 

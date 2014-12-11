@@ -52,4 +52,13 @@ return array(
 
 	),
 
+	'redis' => array(
+		'cluster' => false,
+		'default' => array(
+			'host'     => 'localhost',
+			'port'     => 6380,
+			'database' => 0,
+		),
+	),
+
 );

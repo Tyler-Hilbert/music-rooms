@@ -30,7 +30,7 @@ class Room extends Eloquent {
      */
     public function messages()
     {
-        return $this->hasMany('messages');
+        return $this->hasMany('Message');
     }
 
 }
